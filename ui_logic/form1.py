@@ -23,6 +23,9 @@ class Form1(tk.Tk):
         self.title("Finite Field Calculator")
         self._initialize_ui()
         self.root = self #!!! for opening nist window
+        
+        # !!!Pass self (instance of Form1) to NIST_prime_form
+        self.nist_prime_form = None
 
     def _initialize_ui(self):
         # Define labels
@@ -158,9 +161,14 @@ class Form1(tk.Tk):
         self.txtResult.delete(0, tk.END)#clear result box
         self.txtResult.insert(0, str(result))#insert new result in text box
 
+    # open NIST primes window
     def btn_nist_click(self):
-        # open NIST primes window
-        nist_prime_form = NIST_prime_form(self.root)
+        self.nist_prime_form = NIST_prime_form(self)
+
+    # update prime number input with values from outside window
+    def update_text_box(self, value):   
+        self.txtPrime.delete(0, tk.END)  # Clear previous content
+        self.txtPrime.insert(tk.END, value)
 
 if __name__ == "__main__":
     app = Form1()
