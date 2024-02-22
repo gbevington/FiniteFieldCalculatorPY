@@ -1,6 +1,9 @@
 import random
 from math import isqrt
 
+import tkinter as tk
+from tkinter import messagebox
+
 class ValidationMethods:
     @staticmethod
     def is_probable_prime(n: int, certainty: int) -> bool:
@@ -40,6 +43,6 @@ class ValidationMethods:
     @staticmethod
     def is_valid_operand(operand: int, prime_num: int) -> bool:
         if not (0 <= operand < prime_num):
-            print("Invalid operand. Operand must be between zero and the prime input number minus one.")
+            messagebox.showerror("Invalid Operand", "Operand must be between zero and the prime input number minus one.")
             return False
         return True
