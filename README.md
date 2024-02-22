@@ -15,9 +15,9 @@ To use this application, follow these steps:
     git clone https://github.com/your-username/FiniteFieldCalculatorPY.git
     ```
 
-2. Navigate to the cloned directory.
+2. Navigate to the user interface folder inside of the cloned directory.
    ```bash
-    cd FiniteFieldCalculatorPY
+    cd FiniteFieldCalculatorPY/ui_logic
     ```
 3. Run the python script.
   ```bash
