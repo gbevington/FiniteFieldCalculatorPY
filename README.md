@@ -22,4 +22,3 @@ To use this application, follow these steps:
 3. Run the python script.
   ```bash
     python -m form1
-    ```
